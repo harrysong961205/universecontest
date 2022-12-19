@@ -41,3 +41,9 @@ Dense와 LSTM을 적절히 혼합하여 사용.
 - train data과 validation data에 대한 결과와 현재 제출된 대회용 답안에 대한 결과가
 다른 이유는 대회용 답안에서 Weighted RMSE를 사용했기 때문에 특정 자료에서
 정확도가 낮았기 때문이라고 생각함.
+
+### 5. 아쉬웠던 점 / 제안점
+- Sclering을 다른 방법을 통해 했으면 조금 더 좋았을 거라고 생각함. 이 대회에서는 특히 이상치가 많았던터라, 이상치에 효과적인 RobustScaler을 썼으면 조금 더 좋은 결과가 나왔을거라고 생각함.
+- K Fold Cross Validation을 통해 적절한 데이터를 사용했다면 좋은 결과로 이어졌을거라고 생각함.
+- tf.random.set_seed를 통해 시드 고정을 하여, 확률을 고정시켰다면 K fold Cross validation처럼 가장 좋은 seed 값을 제출할 수 있어서 좋은 결과로 이어졌을 거라고 생각함.
+- Nan 값을 drop 하지 말고, MLP or Polynormial inperpolation을 통해 같은 시간대의 다른 관측소의 데이터를 이용해 Nan 값을 근사시켜 데이터를 보간했다면 좋은 결과로 이어졌을 것이라고 생각함.
