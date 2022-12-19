@@ -7,7 +7,7 @@
 - 국내 지자기 관측소 3곳의 &quot;bx_gsm&quot;,&quot;by_gsm&quot;,&quot;bz_gsm&quot;
 ### 1-2. 사용하지 않은 데이터
 - ACE·DSCOVR 위성의 태양풍 데이터의 &quot;proton_density&quot;, &quot;proton_temperature&quot;, &quot;proton_speed&quot;
-- 사유 : nan의 값이 많아 모두 제거 처리.
+ 사유 : nan의 값이 많아 모두 제거 처리.
 ### 1-3. 추가한 데이터
 -국내 지자기 관측소 3곳의 (총 자기장) = np.sqrt((bx_gsm)**2 +(by_gsm)**2+(bz_gsm)**2)을 추가
 - 사유 : 총 자기장 값은 주어지지 않았기 때문에 추가함.
@@ -17,8 +17,9 @@
 의 cliping 사용.
 ### 1-5. minmaxscaler를 이용하여 정규화 진행
 ### 1-6. 180개의 분 데이터를 하나의 array로 변경
+ 사유 : 3시간(180분)의 데이터가 하나의 국내 지자기 교란 지수를 가르키기 때문.
 ### 1-7. train data와 validation data를 6:4로 분리
-사유 : 3시간(180분)의 데이터가 하나의 국내 지자기 교란 지수를 가르키기 때문.
+
 
 #### 대회 답안 도출용 데이터 처리
 - interploate을 이용하여 결측값을 처리함.
