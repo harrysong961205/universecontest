@@ -47,3 +47,4 @@ Dense와 LSTM을 적절히 혼합하여 사용.
 - K Fold Cross Validation을 통해 적절한 데이터를 사용했다면 좋은 결과로 이어졌을거라고 생각함.
 - tf.random.set_seed를 통해 시드 고정을 하여, 확률을 고정시켰다면 K fold Cross validation처럼 가장 좋은 seed 값을 제출할 수 있어서 좋은 결과로 이어졌을 거라고 생각함.
 - Nan 값을 drop 하지 말고, MLP or Polynormial inperpolation을 통해 같은 시간대의 다른 관측소의 데이터를 이용해 Nan 값을 근사시켜 데이터를 보간했다면 좋은 결과로 이어졌을 것이라고 생각함.
+- 모델이 쓸데없이 무겁지 않았나 라는 생각이 들었음. resource를 조금 사용하며 loss는 유지하는 방향으로 모델 최적화를 했다면 더 좋은 방법이 되지 않았을까 생각함.
